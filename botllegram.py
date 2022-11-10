@@ -1,6 +1,6 @@
 import telebot
 
-CHAVE_API = "5621338575:AAHhicprkqPlRIN_SUOYeCYV23puiEuO6W8"
+CHAVE_API = "Chave Bot"
 
 bot = telebot.TeleBot(CHAVE_API)
 @bot.message_handler(commands=["CRA"])
