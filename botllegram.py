@@ -1,7 +1,7 @@
 import telebot
 import os
 
-CHAVE_API = os.environ['key-bot']
+CHAVE_API = os.environ['keybot']
 
 bot = telebot.TeleBot(CHAVE_API)
 
