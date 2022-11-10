@@ -1,8 +1,11 @@
 import telebot
+import os
 
-CHAVE_API = "Chave Bot"
+CHAVE_API = os.environ['key-bot']
 
 bot = telebot.TeleBot(CHAVE_API)
+
+
 @bot.message_handler(commands=["CRA"])
 def Reclamacao(mensagem):
     texto = """
@@ -11,6 +14,7 @@ def Reclamacao(mensagem):
        /Duvidas sobre a matrícula
        /Documentos para fazer matricula"""
     bot.send_message(mensagem.chat.id, texto)
+
 
 @bot.message_handler(commands=["Matriculas"])
 def Reclamacao(mensagem):
@@ -29,6 +33,7 @@ def Reclamacao(mensagem):
 
 (https://www.uniceplac.edu.br/comunidades/)"""
     bot.send_message(mensagem.chat.id, texto)
+
 
 @bot.message_handler(commands=["Beneficios"])
 def Reclamacao(mensagem):
@@ -51,6 +56,8 @@ def Reclamacao(mensagem):
             Telefone: (61) 3035-1814
  """
     bot.send_message(mensagem.chat.id, texto)
+
+
 @bot.message_handler(commands=["Boletos"])
 def Reclamacao(mensagem):
     texto = """
@@ -70,6 +77,8 @@ def Reclamacao(mensagem):
        Link para negociar dívidas:  https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/negociacao/introducao"""
 
     bot.send_message(mensagem.chat.id, texto)
+
+
 @bot.message_handler(commands=["Duvidas"])
 def Reclamacao(mensagem):
     texto = """
@@ -79,6 +88,7 @@ def Reclamacao(mensagem):
 
     bot.send_message(mensagem.chat.id, texto)
 
+
 @bot.message_handler(commands=["Financeiro"])
 def Reclamacao(mensagem):
     texto = """
@@ -86,6 +96,7 @@ def Reclamacao(mensagem):
        /Dividas para negociar as dividas
        /Duvidas para retirar as duvidas """
     bot.send_message(mensagem.chat.id, texto)
+
 
 @bot.message_handler(commands=["Declaracao"])
 def Reclamacao(mensagem):
@@ -97,6 +108,7 @@ def Reclamacao(mensagem):
    """
     bot.send_message(mensagem.chat.id, texto)
 
+
 @bot.message_handler(commands=["Documentos"])
 def Reclamacao(mensagem):
     texto = """
@@ -105,6 +117,7 @@ def Reclamacao(mensagem):
         https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/financeiro
          """
     bot.send_message(mensagem.chat.id, texto)
+
 
 @bot.message_handler(commands=["Carteirinha"])
 def Reclamacao(mensagem):
@@ -117,6 +130,7 @@ def Reclamacao(mensagem):
 """
     bot.send_message(mensagem.chat.id, texto)
 
+
 @bot.message_handler(commands=["Calendario"])
 def Reclamacao(mensagem):
     texto = """ 
@@ -126,6 +140,7 @@ def Reclamacao(mensagem):
  """
     bot.send_message(mensagem.chat.id, texto)
 
+
 @bot.message_handler(commands=["Atividades"])
 def Reclamacao(mensagem):
     texto = """ 
@@ -134,6 +149,8 @@ def Reclamacao(mensagem):
     https://www.uniceplac.edu.br/atividades-complementares/
      """
     bot.send_message(mensagem.chat.id, texto)
+
+
 @bot.message_handler(commands=["CAD"])
 def Reclamacao(mensagem):
     texto = """
@@ -145,7 +162,9 @@ def Reclamacao(mensagem):
        /Declaracao para inforamção sobre declaroções"""
     bot.send_message(mensagem.chat.id, texto)
 
-#opção3 do codigo de entrada
+# opção3 do codigo de entrada
+
+
 @bot.message_handler(commands=["Sim"])
 def opcao1(mensagem):
     texto = """
@@ -157,7 +176,9 @@ def opcao1(mensagem):
      Para prosseguir com o atendimento é necessario que você clique em uma das opções 📢"""
     bot.send_message(mensagem.chat.id, texto)
 
-#opção2 do codigo de entrada
+# opção2 do codigo de entrada
+
+
 @bot.message_handler(commands=["Nao"])
 def opcao2(mensagem):
     texto = """
@@ -166,10 +187,14 @@ def opcao2(mensagem):
     /Atendimento a comunidade
     """
     bot.send_message(mensagem.chat.id, texto)
+
+
 def verificar(mensagem):
     return True
 
-#codigo de entrada
+# codigo de entrada
+
+
 @bot.message_handler(func=verificar)
 def responder(mensagem):
     texto = """
@@ -187,7 +212,7 @@ Estou aqui para te auxíliar no atendimento incial.
         
 Para prosseguir com o atendimento é necessario que você clique em uma das opções 📢"""
 
-
     bot.reply_to(mensagem, texto)
+
 
 bot.polling()
