@@ -53,14 +53,18 @@ def Reclamacao(mensagem):
             Telefone: (61) 3035-1814
  """
     bot.send_message(mensagem.chat.id, texto)
-
-    bot.send_message(mensagem.chat.id, texto)
-
+    
+@bot.message_handler(commands=["Atendimento"])
+def Reclamacao(mensagem):
+    texto = """ acesse o link abaixo para atendimento a comunidade 👇🏽
+https://www.uniceplac.edu.br/comunidades/
+ """
+    bot.send_message(mensagem.chat.id, texto)    
 
 @bot.message_handler(commands=["Boletos"])
 def Reclamacao(mensagem):
     texto = """
-         o	Para acessar os boletos clica no link abaixo
+         Para acessar os boletos, clique no link abaixo 👇🏽
     
          https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/financeiro"""
 
@@ -71,7 +75,7 @@ def Reclamacao(mensagem):
 def Reclamacao(mensagem):
     texto = """
     
-        o  Para negociar dívidas clique no link abaixo 👇🏽
+        Para negociar dívidas, clique no link abaixo 👇🏽
        
        Link para negociar dívidas:  https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/negociacao/introducao"""
 
@@ -81,7 +85,7 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["Duvidas"])
 def Reclamacao(mensagem):
     texto = """
-       Para sanar duvidas ligue no telefone:
+       Se ainda restou alguma dúvida ligue no telefone abaixo 👇🏽. 
         
         📞 (61) 3035-1814"""
 
@@ -90,10 +94,14 @@ def Reclamacao(mensagem):
 
 @bot.message_handler(commands=["Financeiro"])
 def Reclamacao(mensagem):
-    texto = """
-       /Boletos para informação de boletos
-       /Dividas para negociar as dividas
-       /Duvidas para retirar as duvidas """
+    texto = """ 
+        Clique na opção desejada 👇🏽
+        
+      /Dividas para negociar as dívidas
+      /Duvidas  para retirar as dúvidas
+      /Boletos para informações sobre boletos
+    
+   """
     bot.send_message(mensagem.chat.id, texto)
 
 
