@@ -41,20 +41,19 @@ def Reclamacao(mensagem):
        
             ● Benefícios 
             
-            (Clique em uma opção)
-                
-            /Boletos para emissão de boletos   
-            /Dividas para negociar as dívidas 
+            (⚠️ Clique em uma opção ⚠️)
+          
+            ●	Para informações sobre renovação dos benefícios (Novo Fies, Prouni, Posso).
 
-            o	Para informações sobre renovação dos benefícios (Novo Fies, Prouni, Posso).
-
-            Contato
+            ●   Contato
             Telefone: (61) 3035-1815
             E-mail: fies.prouni@uniceplac.edu.br
 
-            o	Dúvidas
+            ●	Dúvidas
             Telefone: (61) 3035-1814
  """
+    bot.send_message(mensagem.chat.id, texto)
+
     bot.send_message(mensagem.chat.id, texto)
 
 
