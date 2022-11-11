@@ -127,15 +127,14 @@ def Reclamacao(mensagem):
     bot.send_message(mensagem.chat.id, texto)
 
 
-
 @bot.message_handler(commands=["Carteirinha"])
 def Reclamacao(mensagem):
     texto = """
     o	Para informações sobre a carteirinha ligue para o 
-    Telefone: (61) 3035-3911 
-    ou se preferir mande um e-mail para:
+   📞 Telefone: (61) 3035-3911 
     
-    📬E-mail: central.aluno@uniceplac.edu.br
+    ou se preferir mande um e-mail para:
+    📬 E-mail:  central.aluno@uniceplac.edu.br
 """
     bot.send_message(mensagem.chat.id, texto)
 
