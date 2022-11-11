@@ -152,7 +152,7 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["Atividades"])
 def Reclamacao(mensagem):
     texto = """ 
-    Para atividades complementares acesse o link: 
+    Para atividades complementares acesse o link 👇🏽: 
     
     https://www.uniceplac.edu.br/atividades-complementares/
      """
@@ -162,12 +162,17 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["CAD"])
 def Reclamacao(mensagem):
     texto = """
-       /Boletos para informação de boletos
-       /Documentos para emissão de documentos
-       /Carteirinha para saber sobre a carteirinha 
-       /Calendario para calendário acadêmicos 
-       /Atividades para atividade complementares  
-       /Declaracao para inforamção sobre declaroções"""
+        Clique na opção desejada 👇🏽
+        
+       /Documentos para emissão de requerimentos de documentos
+       
+       /Carteirinha para saber sobre a carteirinha
+        
+       /Calendario para calendário acadêmico 
+       
+       /Atividades para atividades complementares 
+        
+       /Declaracao para informação sobre declarações"""
     bot.send_message(mensagem.chat.id, texto)
 
 # opção3 do codigo de entrada
