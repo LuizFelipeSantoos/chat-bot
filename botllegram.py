@@ -21,19 +21,17 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["Matriculas"])
 def Reclamacao(mensagem):
     texto = """
-          •	CRA
+            ● Matrículas
+
+          •	CRA Centro de atendimento do aluno
+          
             o	Matrículas: https://uniceplac.inscricao.crmeducacional.com/login/76
-            Telefone: (61) 3035-3932
+            📞 Telefone: (61) 3035-3932
             
             o	Dúvidas sobre Matrícula
-            Telefone: (61) 3035-3932
+            📞 Telefone: (61) 3035-3932
 
-            o	Documentos para Matrícula: https://www.uniceplac.edu.br/graduacao/
-
-
-•	Atendimento a comunidade;
-
-(https://www.uniceplac.edu.br/comunidades/)"""
+            o	Documentos para Matrícula: https://apps.uniceplac.edu.br/matricula-on-line"""
     bot.send_message(mensagem.chat.id, texto)
 
 
