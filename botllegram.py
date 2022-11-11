@@ -181,9 +181,11 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["Sim"])
 def opcao1(mensagem):
     texto = """
-    Olá tudo bem? Você gostaria de falar com qual setor? (⚠️Clique em uma opção)
+    Olá tudo bem? Você gostaria de falar com qual setor?
+    Clique na opção abaixo 👇🏽
+    
     /Financeiro para falar com financeiro 
-    /CAD para falar com o CAD
+    /CAD para falar com a central de atendimento ao aluno
     /Beneficios para falar sobre os beneficios
     
      Para prosseguir com o atendimento é necessario que você clique em uma das opções 📢"""
@@ -195,9 +197,12 @@ def opcao1(mensagem):
 @bot.message_handler(commands=["Nao"])
 def opcao2(mensagem):
     texto = """
-    Olá tudo bem? Você já conhece a nossa Universidade? (Clique em uma opção)
-    /CRA
-    /Atendimento a comunidade
+    Olá tudo bem? Você já conhece a nossa universidade? 
+    (⚠️ Clique em uma opção ⚠️)
+    
+    /CRA para falar na central de atendimento do aluno 
+    
+    /Atendimento comunitário
     """
     bot.send_message(mensagem.chat.id, texto)
 
