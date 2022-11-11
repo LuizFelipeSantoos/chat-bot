@@ -108,7 +108,7 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["Declaracao"])
 def Reclamacao(mensagem):
     texto = """ 
-        Clique no link abaixo para obter a	declaração que você deseja. 
+        Clique no link abaixo para obter a declaração que você deseja. 
         
         https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/financeiro
     
@@ -119,11 +119,13 @@ def Reclamacao(mensagem):
 @bot.message_handler(commands=["Documentos"])
 def Reclamacao(mensagem):
     texto = """
-        Para emissão de documentação clique no link abaixo: 
+        Para emissão de documentação clique no link abaixo 👇🏽: 
         
-        https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/financeiro
+        
+        https://portal2.uniceplac.edu.br/FrameHTML/web/app/edu/PortalEducacional/#/requerimentos
          """
     bot.send_message(mensagem.chat.id, texto)
+
 
 
 @bot.message_handler(commands=["Carteirinha"])
