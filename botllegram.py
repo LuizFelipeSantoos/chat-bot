@@ -206,7 +206,6 @@ def opcao2(mensagem):
     """
     bot.send_message(mensagem.chat.id, texto)
 
-
 def verificar(mensagem):
     return True
 
@@ -219,16 +218,17 @@ def responder(mensagem):
 Olá tudo bem? 
 Eu me chamo ANNEBOT- sou a assistente virtual da UNICEPLAC.
  
-Estou aqui para te auxíliar no atendimento incial.
-
+Estou aqui para te auxiliar no atendimento inicial.
+    
+    📌 Lembrando que eu ainda não entendo áudio e imagens por aqui, para prosseguir com o atendimento clique na opção marcada em azul. 
+    
     Você já é uma aluno(a) da Uniceplac?
-    ( ⚠️Clique no item abaixo  ⚠️):
     
      /Sim,  sou aluno da Uniceplac
-     /Nao,  gostaria de saber mais informações  
-    
-        
-Para prosseguir com o atendimento é necessario que você clique em uma das opções 📢"""
+     /Nao,  gostaria de saber mais informações
+     
+  Por gentileza clique no item acima, para continuar o atendimento 👆🏽
+     """
 
     bot.reply_to(mensagem, texto)
 
