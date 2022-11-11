@@ -174,10 +174,9 @@ def Reclamacao(mensagem):
         
        /Declaracao para informação sobre declarações"""
     bot.send_message(mensagem.chat.id, texto)
+#opção para cima são para as alternativas dadas.    
 
 # opção3 do codigo de entrada
-
-
 @bot.message_handler(commands=["Sim"])
 def opcao1(mensagem):
     texto = """
@@ -192,8 +191,6 @@ def opcao1(mensagem):
     bot.send_message(mensagem.chat.id, texto)
 
 # opção2 do codigo de entrada
-
-
 @bot.message_handler(commands=["Nao"])
 def opcao2(mensagem):
     texto = """
@@ -209,13 +206,11 @@ def opcao2(mensagem):
 def verificar(mensagem):
     return True
 
-# codigo de entrada
-
-
+# codigo de entrada para pergunta 
 @bot.message_handler(func=verificar)
 def responder(mensagem):
     texto = """
-Olá tudo bem? 
+Olá, tudo bem? 
 Eu me chamo ANNEBOT- sou a assistente virtual da UNICEPLAC.
  
 Estou aqui para te auxiliar no atendimento inicial.
