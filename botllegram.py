@@ -9,11 +9,13 @@ bot = telebot.TeleBot(CHAVE_API)
 @bot.message_handler(commands=["CRA"])
 def Reclamacao(mensagem):
     texto = """
-        (Clique em uma opção)
-       /Matriculas para fazer matrículas 
+        Clique na opção desejada para prosseguir com atendimento 👇🏽
+        
+       /Matriculas para se matricular
        /Duvidas sobre a matrícula
-       /Documentos para fazer matricula"""
+      """
     bot.send_message(mensagem.chat.id, texto)
+
 
 
 @bot.message_handler(commands=["Matriculas"])
